@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#18272a" />
+  <title>The Little Things</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="game-shell">
+    <canvas id="world" aria-label="The Little Things game world"></canvas>
+    <div class="vignette"></div>
+    <header class="topbar">
+      <button class="brand" id="brandHome" aria-label="Open pause menu"><span class="brand-mark">✳</span><span>THE LITTLE THINGS<small>BRACKENFORD · EST. TODAY</small></span></button>
+      <div class="chapter"><span class="eyebrow">A SMALL MYSTERY</span><strong>The Watch That Waited</strong></div>
+      <div class="top-actions">
+        <button class="icon-btn" id="journalBtn" title="Journal (J)">⌕ <span>Journal</span></button>
+        <button class="icon-btn" id="boardBtn" title="Clue board (B)">⌘ <span>Clue board</span><i id="clueCount">0</i></button>
+        <button class="icon-btn" id="pauseBtn" title="Pause">Ⅱ <span>Menu</span></button>
+      </div>
+    </header>
+    <section class="location-label"><span class="location-dot"></span><span id="locationName">THE LITTLE THINGS · SHOP</span><span class="weather">☂ &nbsp; A soft rain</span></section>
+    <div class="game-bottom">
+      <div class="hint" id="hint"><span class="keycap">WASD</span> to wander <span class="hint-sep">·</span> <span class="keycap">E</span> to look closer <span class="hint-sep">·</span> <span class="keycap">J</span> journal</div>
+      <div class="bottom-controls">
+        <button class="round-control" id="inventoryBtn" title="Pocket inventory">▤</button>
+        <button class="interact-btn" id="interactBtn"><span>✦</span> Look closer <kbd>E</kbd></button>
+      </div>
+    </div>
+    <div class="touch-pad" aria-label="Movement controls"><button data-dir="up">↑</button><div><button data-dir="left">←</button><button data-dir="down">↓</button><button data-dir="right">→</button></div></div>
+    <div class="toast" id="toast"></div>
+    <div class="modal-layer" id="modalLayer"></div>
+    <footer class="sound-toggle"><button id="soundBtn" aria-label="Toggle sound">♫ <span>Sound on</span></button></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
